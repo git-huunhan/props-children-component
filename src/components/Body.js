@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import '../css/Main.css';
 import Logo from '../img/logo.svg';
 import dropDownImg from '../img/drop-down.svg';
@@ -23,6 +25,12 @@ class Body extends Component {
       </div>
     );
   }
+}
+
+Body.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.number,
+  drop: PropTypes.number
 }
 
 export default Body;

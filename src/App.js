@@ -9,17 +9,20 @@ class App extends Component {
     super();
 
     this.state = {
+      header: 'Profolio Perfomance',
+      viewAll: 'View all',
       title: 'Cash Diposits', 
       number: 1.7, 
-      drop: 54.1   
+      drop: 54.1,   
+      summit: 'View complete report'
     }
   }
   
   render(){
     return (
       <div className="App">
-        <Header title="Profolio Perfomance">
-          View all    
+        <Header title={this.state.header}>
+          {this.state.viewAll}    
         </Header>
         <div className="Main">
           <Body title={this.state.title} drop={this.state.drop}>
@@ -33,7 +36,7 @@ class App extends Component {
           </Body>
         </div>
         <Footer>
-          View complete report
+          {this.state.summit}
         </Footer>
       </div>
     );
